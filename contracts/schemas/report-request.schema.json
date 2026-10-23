@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReportRequest",
+  "type": "object",
+  "required": [
+    "text",
+    "user_label",
+    "predicted_level",
+    "predicted_score",
+    "model_version"
+  ],
+  "properties": {
+    "text": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_label": {
+      "type": "string",
+      "enum": ["scam", "legit"]
+    },
+    "predicted_level": {
+      "type": "string",
+      "enum": ["green", "amber", "red"]
+    },
+    "predicted_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "model_version": {
+      "type": "string"
+    }
+  }
+}

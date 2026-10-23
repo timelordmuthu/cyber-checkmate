@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "components": {
+    "text_model": true,
+    "url_model": true,
+    "rules": true,
+    "ocr": true,
+    "llm_gemini": false,
+    "llm_groq": false
+  },
+  "model_version": "v2",
+  "api_version": 2,
+  "config": {}
+}

@@ -1,0 +1,72 @@
+{
+  "fake_kyc_with_lookalike_link": {
+    "text": "Dear customer, your SBI account KYC has expired. Update immediately at http://sbi.kyc-update.xyz/login or your account will be blocked within 24 hours. Call 9800000001.",
+    "expected_level": "red",
+    "description": "Scam message imitating State Bank of India with fear, urgency, and a brand-lookalike phishing URL."
+  },
+  "bank_otp_legit": {
+    "text": "Your OTP for SBI NetBanking login is 483921. Valid for 5 minutes. Do NOT share this OTP with anyone, including bank employees.",
+    "expected_level": "green",
+    "description": "Legitimate bank login OTP alert with standard security warning."
+  },
+  "upi_refund_scam": {
+    "text": "Dear User, your pending refund of Rs.2,499 from PhonePe has been approved. Claim immediately: enter your UPI PIN to receive money.",
+    "expected_level": "red or amber",
+    "description": "UPI refund scam attempting to fool user into entering their UPI PIN."
+  },
+  "delivery_update_legit": {
+    "text": "Your BlueDart parcel with tracking number BD92847120 has been dispatched and will be delivered by 6 PM today. Thank you for shopping with us.",
+    "expected_level": "green",
+    "description": "Standard legitimate courier delivery notification."
+  },
+  "job_task_scam": {
+    "text": "Part-time job offer! Earn Rs.3000 to Rs.8000 daily by liking YouTube videos and rating hotels on Telegram. Contact HR manager immediately at 9800000002 for registration bonus.",
+    "expected_level": "red or amber",
+    "description": "Work-from-home / task reward scam promising unrealistic daily earnings."
+  },
+  "plain_shortener_link": {
+    "url": "http://bit.ly/3xTeamNotes",
+    "expected_level": "amber",
+    "description": "Isolated URL shortener without surrounding context that conceals the true destination."
+  },
+  "probe_P1_digital_arrest": {
+    "text": "This is Mumbai Police cyber cell. A parcel with drugs in your name was seized. Stay on video call, don't tell anyone, or you will be arrested today.",
+    "expected_level": "red or amber",
+    "description": "P1 probe: Digital arrest extortion scam imitating police."
+  },
+  "probe_P2_task_job": {
+    "text": "Hi! Part time job, earn 3000 daily by liking YouTube videos. Telegram par join karo.",
+    "expected_level": "red or amber",
+    "description": "P2 probe: Part-time job task scam."
+  },
+  "probe_P3_hinglish_electricity": {
+    "text": "Aapka bijli connection aaj raat 9:30 baje kat diya jayega. Turant officer se baat karein 98XXXXXX12",
+    "expected_level": "red or amber",
+    "description": "P3 probe: Hinglish electricity disconnection scam."
+  },
+  "probe_P4_investment": {
+    "text": "Join our VIP group for guaranteed returns. Double your money in 7 days, invest and earn daily profit.",
+    "expected_level": "red or amber",
+    "description": "P4 probe: High-yield investment scam with guaranteed return claim."
+  },
+  "probe_P5_legit_otp": {
+    "text": "492011 is your SBI NetBanking OTP for txn of Rs 1,500 at AMAZON. Valid 10 mins. Do not share OTP with anyone.",
+    "expected_level": "green",
+    "description": "P5 probe: Legitimate bank transaction OTP alert."
+  },
+  "probe_P6_legit_police_awareness": {
+    "text": "Police never ask you to stay on a video call or transfer money. Report cyber fraud at 1930.",
+    "expected_level": "green",
+    "description": "P6 probe: Official police awareness message against digital arrest."
+  },
+  "probe_P7_official_url_only": {
+    "url": "https://www.onlinesbi.sbi/",
+    "expected_level": "green",
+    "description": "P7 probe: Official whitelisted bank portal URL alone."
+  },
+  "probe_P8_fake_kyc": {
+    "text": "Dear customer, your SBI account KYC has expired. Update within 24 hours at http://sbi-kyc-update.xyz/login or your account will be blocked.",
+    "expected_level": "red or amber",
+    "description": "P8 probe: Fake KYC message with phishing link."
+  }
+}

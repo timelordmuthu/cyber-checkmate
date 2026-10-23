@@ -1,0 +1,71 @@
+{
+  "risk_score": 91,
+  "level": "red",
+  "input_type": "text",
+  "extracted_text": "Dear customer, your SBI KYC is expiring. Update immediately at http://sbi-kyc-update.xyz/login or account will be blocked. Share OTP to verify.",
+  "urls_found": [
+    "http://sbi-kyc-update.xyz/login"
+  ],
+  "entities": {
+    "phones": [],
+    "upi_ids": [],
+    "urls": [
+      "http://sbi-kyc-update.xyz/login"
+    ],
+    "amounts": [],
+    "emails": [],
+    "account_like": []
+  },
+  "overrides_fired": [
+    "strong_lookalike_floor"
+  ],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "authority",
+      "evidence": "SBI",
+      "strength": 0.85
+    },
+    {
+      "type": "url",
+      "category": "brand_lookalike",
+      "evidence": "domain imitates sbi.co.in",
+      "strength": 0.95
+    },
+    {
+      "type": "keyword",
+      "category": "text_model",
+      "evidence": "kyc",
+      "strength": 0.83
+    },
+    {
+      "type": "tactic",
+      "category": "urgency",
+      "evidence": "immediately",
+      "strength": 0.72
+    },
+    {
+      "type": "tactic",
+      "category": "payment_credentials",
+      "evidence": "share otp",
+      "strength": 0.9
+    }
+  ],
+  "component_scores": {
+    "text": 0.91,
+    "url": 0.95,
+    "rules": 0.8
+  },
+  "error": null,
+  "advice_en": "This message is very likely a scam because it uses a fake SBI website and demands your OTP urgently. Real banks never ask for OTPs over SMS. Do not click the link or share any credentials.",
+  "advice_hi": "यह संदेश संभवतः धोखाधड़ी है क्योंकि यह एक नकली SBI वेबसाइट का उपयोग करता है और आपका OTP तुरंत मांगता है। असली बैंक कभी SMS पर OTP नहीं मांगते। लिंक पर क्लिक न करें और कोई जानकारी साझा न करें।",
+  "next_steps": [
+    "Do not click the link",
+    "Do not share your OTP, UPI PIN, or CVV with anyone",
+    "Block the sender",
+    "Report at 1930 or cybercrime.gov.in"
+  ],
+  "explanation_source": "llm",
+  "model_version": "v2",
+  "processing_ms": 340
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "risk_score",
+    "level"
+  ],
+  "properties": {
+    "risk_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "green",
+        "amber",
+        "red"
+      ]
+    },
+    "input_type": {
+      "type": "string"
+    },
+    "extracted_text": {
+      "type": "string"
+    },
+    "urls_found": {
+      "type": "array"
+    },
+    "red_flags": {
+      "type": "array"
+    },
+    "component_scores": {
+      "type": "object"
+    },
+    "overrides_fired": {
+      "type": "array"
+    },
+    "advice_en": {
+      "type": "string"
+    },
+    "advice_hi": {
+      "type": "string"
+    },
+    "advice_local": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "next_steps": {
+      "type": "array"
+    },
+    "next_steps_hi": {
+      "type": "array"
+    },
+    "next_steps_local": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "entities": {
+      "type": "object"
+    },
+    "language": {
+      "type": "object"
+    },
+    "reputation": {
+      "type": "array"
+    },
+    "explanation_source": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "processing_ms": {
+      "type": "integer"
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

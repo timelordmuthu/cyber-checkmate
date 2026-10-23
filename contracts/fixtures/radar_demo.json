@@ -1,0 +1,44 @@
+{
+  "demo": true,
+  "generated_at": "2026-10-22T00:00:00Z",
+  "top_scam_categories": [
+    {
+      "category": "fake_kyc",
+      "count": 42
+    },
+    {
+      "category": "digital_arrest",
+      "count": 28
+    },
+    {
+      "category": "job_offer",
+      "count": 19
+    }
+  ],
+  "top_entities": [
+    {
+      "type": "upi_id",
+      "value": "refund.help@ybl",
+      "reports": 15
+    },
+    {
+      "type": "phone",
+      "value": "98XXXXXX12",
+      "reports": 11
+    }
+  ],
+  "trend": [
+    {
+      "date": "2026-10-20",
+      "count": 25
+    },
+    {
+      "date": "2026-10-21",
+      "count": 34
+    },
+    {
+      "date": "2026-10-22",
+      "count": 42
+    }
+  ]
+}

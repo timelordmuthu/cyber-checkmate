@@ -1,0 +1,233 @@
+"""
+schemas.py – Pydantic models matching the FR1 API contract EXACTLY.
+
+Contract rules (from PRD FR1):
+- `level` is exactly one of "green" | "amber" | "red".
+- `strength` is always a float in 0–1.
+- `component_scores.url` is null when no URL was found.
+- `red_flags` sorted by strength descending, max 10 items.
+- `input_type` is "text" | "url" | "image".
+- On success, `error` is null.
+- On bad input, return HTTP 400 with {"error": "<message>"} and no other fields.
+"""
+
+from __future__ import annotations
+
+from typing import Literal, Optional
+from pydantic import BaseModel, Field, field_validator
+
+
+# ---------------------------------------------------------------------------
+# Sub-models
+# ---------------------------------------------------------------------------
+
+class RedFlag(BaseModel):
+    """A single detected signal contributing to the risk score.
+
+    - `strength` is in 0–1 (display ordering only; fusion uses component_scores).
+    """
+    type: Literal["tactic", "keyword", "url"] = Field(
+        ..., description="Category of signal source."
+    )
+    category: str = Field(
+        ..., description="Specific sub-category (e.g. 'urgency', 'text_model', 'brand_lookalike')."
+    )
+    evidence: str = Field(
+        ..., description="Short snippet from the original text or URL supporting this flag."
+    )
+    strength: float = Field(
+        ..., ge=0.0, le=1.0,
+        description="How strongly this single flag points to a scam (0–1). Used for ordering only."
+    )
+
+    @field_validator("strength")
+    @classmethod
+    def clamp_strength(cls, v: float) -> float:
+        return max(0.0, min(1.0, float(v)))
+
+
+class ComponentScores(BaseModel):
+    """Raw model and engine outputs before fusion.
+
+    - `text` is null when input has no words (URL-only input).
+    - `url` is null when no URL was found in the input.
+    """
+    text: Optional[float] = Field(
+        None, ge=0.0, le=1.0,
+        description="Text classifier scam probability. Null for URL-only inputs."
+    )
+    url: Optional[float] = Field(
+        None, ge=0.0, le=1.0,
+        description="URL model phishing probability (max across all URLs). Null if no URL present."
+    )
+    rules: float = Field(..., ge=0.0, le=1.0, description="Rule engine score (0–1).")
+
+
+class Entities(BaseModel):
+    """Extracted investigative entities per PRD FR11."""
+    phones: list[str] = Field(default_factory=list, description="Extracted phone numbers.")
+    upi_ids: list[str] = Field(default_factory=list, description="Extracted UPI IDs.")
+    urls: list[str] = Field(default_factory=list, description="Extracted URLs/domains.")
+    amounts: list[str] = Field(default_factory=list, description="Extracted amounts normalized to ₹<number>.")
+    emails: list[str] = Field(default_factory=list, description="Extracted email addresses.")
+    account_like: list[str] = Field(default_factory=list, description="Masked account numbers (XXXX+4 digits).")
+
+
+# ---------------------------------------------------------------------------
+# Main response model
+# ---------------------------------------------------------------------------
+
+class AnalyzeResponse(BaseModel):
+    """Full FR1 JSON contract returned by POST /analyze on success.
+
+    `error` is always null on a successful response.
+    """
+    risk_score: int = Field(
+        ..., ge=0, le=100,
+        description="Fused risk score 0–100."
+    )
+    level: Literal["green", "amber", "red"] = Field(
+        ..., description="Risk level: green (<35) | amber (35–70) | red (>70)."
+    )
+    input_type: Literal["text", "url", "image"] = Field(
+        ..., description="Richest input type sent by the user."
+    )
+    extracted_text: str = Field(
+        ..., description="Text used for analysis. OCR output when input is an image."
+    )
+    urls_found: list[str] = Field(
+        default_factory=list,
+        description="Deduplicated list of URLs extracted from the combined input."
+    )
+    entities: Entities = Field(
+        default_factory=Entities,
+        description="Extracted entities for investigation or reporting (FR11)."
+    )
+    overrides_fired: list[str] = Field(
+        default_factory=list,
+        description="Overrides triggered during score fusion."
+    )
+    red_flags: list[RedFlag] = Field(
+        default_factory=list,
+        description="Up to 10 detected signals, sorted by strength descending."
+    )
+    component_scores: ComponentScores = Field(
+        ..., description="Raw per-component scores before fusion."
+    )
+    error: None = Field(
+        default=None,
+        description="Always null on success."
+    )
+    advice_en: str = Field(..., description="Explanation of the verdict in English (2–3 sentences).")
+    advice_hi: str = Field(..., description="Explanation of the verdict in Hindi (2–3 sentences).")
+    next_steps: list[str] = Field(
+        default_factory=list,
+        description="Fixed action steps chosen by flag categories; never generated by the LLM."
+    )
+    explanation_source: Literal["llm", "template"] = Field(
+        ..., description="Whether the advice came from the LLM or the offline template."
+    )
+    model_version: str = Field(..., description="Active text model version (e.g. 'v1').")
+    processing_ms: int = Field(..., ge=0, description="Total wall-clock time in milliseconds.")
+
+    @classmethod
+    def example(cls) -> "AnalyzeResponse":
+        """Return the canonical FR1 example response for /mock/analyze."""
+        return cls(
+            risk_score=82,
+            level="red",
+            input_type="text",
+            extracted_text="Dear customer, your SBI KYC is expiring. Update immediately at http://sbi-kyc-update.xyz/login or account will be blocked. Share OTP to verify.",
+            urls_found=["http://sbi-kyc-update.xyz/login"],
+            entities=Entities(
+                phones=[],
+                upi_ids=[],
+                urls=["http://sbi-kyc-update.xyz/login"],
+                amounts=[],
+                emails=[],
+                account_like=[],
+            ),
+            overrides_fired=["strong_lookalike_floor"],
+            red_flags=[
+                RedFlag(
+                    type="url",
+                    category="brand_lookalike",
+                    evidence="domain imitates sbi.co.in",
+                    strength=0.95,
+                ),
+                RedFlag(
+                    type="keyword",
+                    category="text_model",
+                    evidence="kyc",
+                    strength=0.83,
+                ),
+                RedFlag(
+                    type="tactic",
+                    category="urgency",
+                    evidence="within 24 hours",
+                    strength=0.6,
+                ),
+            ],
+            component_scores=ComponentScores(text=0.91, url=0.88, rules=0.70),
+            error=None,
+            advice_en=(
+                "This message is very likely a scam because it uses a fake SBI website "
+                "and demands your OTP urgently. Real banks never ask for OTPs over SMS. "
+                "Do not click the link or share any credentials."
+            ),
+            advice_hi=(
+                "यह संदेश संभवतः धोखाधड़ी है क्योंकि यह एक नकली SBI वेबसाइट का उपयोग करता है "
+                "और आपका OTP तुरंत मांगता है। असली बैंक कभी SMS पर OTP नहीं मांगते। "
+                "लिंक पर क्लिक न करें और कोई जानकारी साझा न करें।"
+            ),
+            next_steps=[
+                "Do not click the link",
+                "Do not share your OTP, UPI PIN, or CVV with anyone",
+                "Block the sender",
+                "Report at 1930 or cybercrime.gov.in",
+            ],
+            explanation_source="llm",
+            model_version="v1",
+            processing_ms=1240,
+        )
+
+
+# ---------------------------------------------------------------------------
+# Error response (HTTP 400 / 503 / 500)
+# ---------------------------------------------------------------------------
+
+class ErrorResponse(BaseModel):
+    """Returned on bad input (400), service unavailable (503), or server error (500).
+
+    Contains ONLY the `error` field per FR1 contract.
+    """
+    error: str = Field(..., description="Plain-language error message shown to the user.")
+
+
+# ---------------------------------------------------------------------------
+# FR10.1 – Report endpoint schemas
+# ---------------------------------------------------------------------------
+
+class ReportRequest(BaseModel):
+    """Body of POST /report (FR10.1). The user flags a result as correct or wrong."""
+    text: str = Field(..., description="Message text (OCR text for images; image itself is NOT stored).")
+    urls: list[str] = Field(
+        default_factory=list,
+        description="URLs extracted from the message at analysis time."
+    )
+    user_label: Literal["scam", "legit"] = Field(
+        ..., description="User's assessment: 'scam' or 'legit'."
+    )
+    predicted_level: Literal["green", "amber", "red"] = Field(
+        ..., description="The level the model assigned at the time of analysis."
+    )
+    predicted_score: int = Field(
+        ..., ge=0, le=100,
+        description="The risk_score the model assigned at the time of analysis."
+    )
+    model_version: str = Field(..., description="Model version active at analysis time.")
+
+
+class ReportResponse(BaseModel):
+    """Response to POST /report."""
+    status: Literal["received"] = "received"

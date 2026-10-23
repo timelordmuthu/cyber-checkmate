@@ -1,0 +1,30 @@
+{
+  "risk_score": 55,
+  "level": "amber",
+  "input_type": "text",
+  "extracted_text": "Action required on your account within 2 hours.",
+  "urls_found": [],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "urgency",
+      "evidence": "within 2 hours",
+      "strength": 0.6
+    }
+  ],
+  "component_scores": {
+    "text": 0.55,
+    "url": null,
+    "rules": 0.5
+  },
+  "overrides_fired": [],
+  "advice_en": "Urgent tone detected.",
+  "advice_hi": "संदेश में तात्कालिकता पाई गई।",
+  "next_steps": [
+    "Verify through official channels"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 90,
+  "error": null
+}

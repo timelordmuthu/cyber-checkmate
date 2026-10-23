@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Shield background -->
+  <path d="M6 8 L20 3 L34 8 L34 24 C34 32 20 37 20 37 C20 37 6 32 6 24 Z" fill="#163832" stroke="#8EB698" stroke-width="1.5"/>
+  <!-- Chess knight -->
+  <text x="8" y="27" font-family="monospace" font-size="20" fill="#DAF1DE">♞</text>
+</svg>

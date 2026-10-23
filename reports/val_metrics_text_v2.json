@@ -1,0 +1,29 @@
+{
+  "model_version": "v2",
+  "evaluated_at": "2026-10-22T18:01:44.972944+00:00",
+  "split": "val",
+  "n_val": 1097,
+  "metrics": {
+    "accuracy": 0.9763,
+    "macro_precision": 0.9592,
+    "macro_recall": 0.9707,
+    "macro_f1": 0.9648,
+    "legit_precision": 0.9895,
+    "legit_recall": 0.9804,
+    "legit_f1": 0.9849,
+    "scam_precision": 0.9289,
+    "scam_recall": 0.961,
+    "scam_f1": 0.9447,
+    "confusion_matrix": [
+      [
+        849,
+        17
+      ],
+      [
+        9,
+        222
+      ]
+    ],
+    "n_val": 1097
+  }
+}

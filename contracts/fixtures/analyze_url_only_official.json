@@ -1,0 +1,38 @@
+{
+  "risk_score": 5,
+  "level": "green",
+  "input_type": "url",
+  "extracted_text": "",
+  "urls_found": [
+    "https://www.onlinesbi.sbi/"
+  ],
+  "entities": {
+    "phones": [],
+    "upi_ids": [],
+    "urls": [
+      "https://www.onlinesbi.sbi/"
+    ],
+    "amounts": [],
+    "emails": [],
+    "account_like": []
+  },
+  "overrides_fired": [
+    "official_domain_cap"
+  ],
+  "red_flags": [],
+  "component_scores": {
+    "text": null,
+    "url": 0.05,
+    "rules": 0.0
+  },
+  "error": null,
+  "advice_en": "This is the official SBI NetBanking website. It appears safe to visit. Always check the URL carefully before entering any credentials.",
+  "advice_hi": "यह SBI नेटबैंकिंग की आधिकारिक वेबसाइट है। यह देखने में सुरक्षित लगती है। कोई भी जानकारी दर्ज करने से पहले URL ध्यान से देखें।",
+  "next_steps": [
+    "Always bookmark official banking sites rather than using links",
+    "Check the full URL bar before logging in"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 85
+}

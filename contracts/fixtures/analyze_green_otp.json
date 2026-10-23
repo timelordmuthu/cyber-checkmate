@@ -1,0 +1,32 @@
+{
+  "risk_score": 8,
+  "level": "green",
+  "input_type": "text",
+  "extracted_text": "Your SBI NetBanking login OTP is 483921. Valid for 5 minutes. Do not share this OTP with anyone.",
+  "urls_found": [],
+  "entities": {
+    "phones": [],
+    "upi_ids": [],
+    "urls": [],
+    "amounts": [],
+    "emails": [],
+    "account_like": []
+  },
+  "overrides_fired": [],
+  "red_flags": [],
+  "component_scores": {
+    "text": 0.06,
+    "url": null,
+    "rules": 0.04
+  },
+  "error": null,
+  "advice_en": "This looks like a genuine OTP message from SBI. Remember: never share OTPs with anyone, including people claiming to be bank employees.",
+  "advice_hi": "यह SBI का एक वास्तविक OTP संदेश लगता है। याद रखें: OTP कभी किसी के साथ साझा न करें, यहां तक कि बैंक कर्मचारी भी नहीं।",
+  "next_steps": [
+    "Never share this OTP with anyone",
+    "If you did not request this OTP, contact your bank immediately"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 120
+}

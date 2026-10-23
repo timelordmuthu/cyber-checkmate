@@ -1,0 +1,70 @@
+{
+  "intros": {
+    "red": {
+      "en": "This message shows strong indicators of being a scam. Exercise extreme caution and do not interact.",
+      "hi": "इस संदेश में धोखाधड़ी (स्कैम) होने के पक्के संकेत हैं। इसके साथ कोई बातचीत न करें और अत्यधिक सावधानी बरतें।"
+    },
+    "amber": {
+      "en": "This message contains suspicious elements that warrant caution. Verify independently before proceeding.",
+      "hi": "इस संदेश में कुछ संदिग्ध बातें हैं जो जोखिम भरी हो सकती हैं। आगे बढ़ने से पहले स्वतंत्र रूप से जांच कर लें।"
+    },
+    "green": {
+      "en": "This message does not exhibit typical scam signals, but always remain vigilant.",
+      "hi": "इस संदेश में धोखाधड़ी का कोई सामान्य संकेत नहीं मिला है, फिर भी हमेशा सतर्क रहें।"
+    }
+  },
+  "categories": {
+    "authority": {
+      "en": "It claims to be from a government department, police, or bank authority to gain your trust.",
+      "hi": "यह आपका विश्वास हासिल करने के लिए किसी सरकारी विभाग, पुलिस या बैंक अधिकारी होने का दावा करता है।"
+    },
+    "fear": {
+      "en": "It uses intimidating language such as immediate account blocking or legal action to create panic.",
+      "hi": "यह आपको डराने के लिए बैंक खाता बंद करने या कानूनी कार्रवाई जैसी धमकियों का उपयोग करता है।"
+    },
+    "urgency": {
+      "en": "It creates artificial urgency, pressuring you to take immediate action without thinking.",
+      "hi": "यह आपको सोचने का मौका दिए बिना जल्दबाजी में कदम उठाने का दबाव बनाता है।"
+    },
+    "payment_credentials": {
+      "en": "It requests sensitive financial credentials like your OTP, UPI PIN, password, or immediate money transfer.",
+      "hi": "यह आपसे OTP, UPI PIN, पासवर्ड या तुरंत पैसे भेजने जैसी गोपनीय जानकारी मांग रहा है।"
+    },
+    "isolation": {
+      "en": "It instructs you to keep this matter secret or not discuss it with family or friends.",
+      "hi": "यह आपसे इस बात को गोपनीय रखने या किसी अन्य व्यक्ति से साझा न करने को कहता है।"
+    },
+    "reward": {
+      "en": "It lures you with unrealistic promises of lotteries, job tasks, cashbacks, or gift prizes.",
+      "hi": "यह आपको लॉटरी, नौकरी, कैशबैक या उपहार के झूठे वादों से लुभाने की कोशिश करता है।"
+    },
+    "text_model": {
+      "en": "The language and phrasing strongly resemble patterns commonly found in known fraud messages.",
+      "hi": "इस संदेश की शब्दावली पहले से दर्ज धोखाधड़ी के संदेशों से काफी मिलती-जुलती है।"
+    },
+    "brand_lookalike": {
+      "en": "The web link imitates an official brand or bank address to trick you into entering credentials.",
+      "hi": "यह लिंक किसी असली बैंक या ब्रांड जैसी दिखने वाली नकली वेबसाइट पर ले जाता है ताकि आपकी जानकारी चुराई जा सके।"
+    },
+    "suspicious_tld": {
+      "en": "The website uses an unusual or high-risk domain extension frequently abused by fraudsters.",
+      "hi": "इस वेबसाइट का डोमेन एक्सटेंशन असामान्य है, जिसे जालसाज अक्सर धोखाधड़ी के लिए इस्तेमाल करते हैं।"
+    },
+    "punycode": {
+      "en": "The web address uses deceptive character substitutions to disguise its real destination.",
+      "hi": "वेबसाइट के पते में भ्रमित करने वाले अक्षरों का उपयोग किया गया है ताकि उसका असली रूप छिपाया जा सके।"
+    },
+    "ip_host": {
+      "en": "The link directs to a raw numerical IP address instead of a recognized organization domain.",
+      "hi": "यह लिंक किसी प्रमाणित वेबसाइट के नाम के बजाय सीधे एक संख्यात्मक IP पते पर ले जा रहा है।"
+    },
+    "shortener": {
+      "en": "The link uses a URL shortener or free host that conceals where you will actually be redirected.",
+      "hi": "यह लिंक छोटा किया हुआ (shortened) है, जिससे यह छिप जाता है कि आप वास्तव में किस वेबसाइट पर पहुंचेंगे।"
+    },
+    "many_subdomains": {
+      "en": "The address has an unusually long sequence of subdomains designed to confuse you about the real website.",
+      "hi": "इस पते में कई सारे सब-डोमेन जोड़े गए हैं ताकि आप असली वेबसाइट की पहचान न कर सकें।"
+    }
+  }
+}

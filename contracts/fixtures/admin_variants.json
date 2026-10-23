@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "report_id": 1,
+    "text": "Your power will be disconnected at 9:30 PM. Pay bill at http://pay-bill.click",
+    "label": "scam",
+    "template_id": "in_elec_01_var",
+    "created_at": "2026-10-22T10:05:00Z"
+  }
+]

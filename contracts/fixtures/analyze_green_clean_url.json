@@ -1,0 +1,25 @@
+{
+  "risk_score": 10,
+  "level": "green",
+  "input_type": "url",
+  "extracted_text": "",
+  "urls_found": [
+    "https://google.com"
+  ],
+  "red_flags": [],
+  "component_scores": {
+    "text": null,
+    "url": 0.1,
+    "rules": 0.0
+  },
+  "overrides_fired": [],
+  "advice_en": "Clean domain.",
+  "advice_hi": "सुरक्षित लिंक।",
+  "next_steps": [
+    "Safe to browse"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 70,
+  "error": null
+}

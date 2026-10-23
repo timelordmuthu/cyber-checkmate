@@ -1,0 +1,32 @@
+{
+  "risk_score": 82,
+  "level": "red",
+  "input_type": "text",
+  "extracted_text": "Dear customer your SBI KYC is pending update immediately at http://sbi-kyc.xyz",
+  "urls_found": [
+    "http://sbi-kyc.xyz"
+  ],
+  "red_flags": [
+    {
+      "type": "url",
+      "category": "brand_lookalike",
+      "evidence": "sbi-kyc.xyz",
+      "strength": 0.9
+    }
+  ],
+  "component_scores": {
+    "text": 0.93,
+    "url": 0.88,
+    "rules": 0.7
+  },
+  "overrides_fired": [],
+  "advice_en": "Fake SBI website detected.",
+  "advice_hi": "नकली एसबीआई वेबसाइट पाई गई।",
+  "next_steps": [
+    "Do not click the link or reply."
+  ],
+  "explanation_source": "template",
+  "model_version": "v1",
+  "processing_ms": 120,
+  "error": null
+}

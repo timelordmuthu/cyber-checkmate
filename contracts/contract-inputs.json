@@ -1,0 +1,51 @@
+{
+  "analyze": [
+    {
+      "id": "analyze_red_kyc_en",
+      "form": {
+        "text": "Dear customer, your SBI account KYC has expired. Update within 24 hours at http://sbi-kyc-update.xyz/login or your account will be blocked. Pay Rs 10 verification fee to sbi.kyc@ybl. Helpline 98XXXXXX12"
+      },
+      "expect": {
+        "level_in": ["red"],
+        "upi_contains": "sbi.kyc@ybl"
+      }
+    },
+    {
+      "id": "analyze_green_otp",
+      "form": {
+        "text": "Your SBI NetBanking login OTP is 483921. Valid for 5 minutes. Do not share this OTP with anyone."
+      },
+      "expect": {
+        "level_in": ["green"]
+      }
+    },
+    {
+      "id": "analyze_amber_job",
+      "form": {
+        "text": "Congratulations! You have been selected for Part-time YouTube Video Liking Job. Earn Rs 3,000 to Rs 8,000 daily from home. Join Telegram: t.me/easy-job-98XXXXXX56"
+      },
+      "expect": {
+        "level_in": ["amber", "red"]
+      }
+    },
+    {
+      "id": "analyze_url_only_official",
+      "form": {
+        "text": "https://www.onlinesbi.sbi/"
+      },
+      "expect": {
+        "level_in": ["green"],
+        "text_score_null": true
+      }
+    }
+  ],
+  "errors": [
+    {
+      "id": "empty",
+      "form": {},
+      "expect": {
+        "status": 400
+      }
+    }
+  ]
+}

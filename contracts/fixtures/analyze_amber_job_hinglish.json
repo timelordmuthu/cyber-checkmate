@@ -1,0 +1,30 @@
+{
+  "risk_score": 62,
+  "level": "amber",
+  "input_type": "text",
+  "extracted_text": "Part-time job offer earn 3000 to 8000 daily from home. Join Telegram link.",
+  "urls_found": [],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "reward",
+      "evidence": "earn 3000 to 8000 daily",
+      "strength": 0.75
+    }
+  ],
+  "component_scores": {
+    "text": 0.65,
+    "url": null,
+    "rules": 0.55
+  },
+  "overrides_fired": [],
+  "advice_en": "Be cautious. High-paying part-time online tasks or Telegram job offers are frequently scams.",
+  "advice_hi": "सावधान रहें। घर बैठे ज्यादा कमाई वाले अंशकालिक काम अक्सर धोखाधड़ी होते हैं।",
+  "next_steps": [
+    "Do not transfer any security deposit or registration fee"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 150,
+  "error": null
+}

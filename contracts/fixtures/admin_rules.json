@@ -1,0 +1,16 @@
+{
+  "categories": {
+    "urgency": [
+      {
+        "phrase": "within 24 hours",
+        "weight": 15
+      }
+    ],
+    "payment_credentials": [
+      {
+        "phrase": "share otp",
+        "weight": 18
+      }
+    ]
+  }
+}

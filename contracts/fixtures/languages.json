@@ -1,0 +1,21 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "script": "Latin"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "script": "Devanagari"
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "script": "Tamil"
+    }
+  ],
+  "translator": "ready",
+  "translator_engine": "indictrans2-dist-200M"
+}

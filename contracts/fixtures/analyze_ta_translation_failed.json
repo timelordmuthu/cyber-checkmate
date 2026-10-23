@@ -1,0 +1,30 @@
+{
+  "risk_score": 75,
+  "level": "red",
+  "input_type": "text",
+  "extracted_text": "Unknown tamil message translation fail",
+  "urls_found": [],
+  "red_flags": [],
+  "component_scores": {
+    "text": 0.5,
+    "url": null,
+    "rules": 0.4
+  },
+  "overrides_fired": [],
+  "advice_en": "Translation was unavailable. Proceed with caution.",
+  "advice_hi": "अनुवाद उपलब्ध नहीं था। कृपया सावधानी बरतें।",
+  "language": {
+    "code": "ta",
+    "script": "Tamil",
+    "translated": false,
+    "translation": null,
+    "translator": "indictrans2-dist-200M"
+  },
+  "next_steps": [
+    "Verify manually"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 110,
+  "error": null
+}

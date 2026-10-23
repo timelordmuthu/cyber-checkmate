@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" fill="none">
+  <!-- Shield icon -->
+  <path d="M14 6 L22 3 L30 6 L30 18 C30 23 22 27 22 27 C22 27 14 23 14 18 Z" fill="#235347" stroke="#8EB698" stroke-width="1.5"/>
+  <!-- Chess knight simplified -->
+  <text x="16" y="21" font-family="monospace" font-size="10" fill="#DAF1DE">♞</text>
+  <!-- Wordmark -->
+  <text x="38" y="26" font-family="'Chakra Petch', 'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#DAF1DE" letter-spacing="-0.3">CyberCheckmate</text>
+</svg>

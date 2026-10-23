@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cc-black: #051F20;
+  --color-cc-deep: #0B2B26;
+  --color-cc-pine: #163832;
+  --color-cc-juniper: #235347;
+  --color-cc-glow: #8EB698;
+  --color-cc-mint: #DAF1DE;
+
+  --color-risk-red: #EF4444;
+  --color-risk-amber: #F59E0B;
+  --color-risk-green: #22C55E;
+  --color-cc-amber: #F59E0B;
+  --color-cc-base: #051F20;
+  --color-cc-surface: #163832;
+
+  --font-heading: 'Chakra Petch', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-cc-black);
+  color: var(--color-cc-mint);
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cc-glow);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #000;
+    background: #fff;
+  }
+}

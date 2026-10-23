@@ -1,0 +1,30 @@
+{
+  "risk_score": 45,
+  "level": "amber",
+  "input_type": "text",
+  "extracted_text": "Verify your account details urgently",
+  "urls_found": [],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "urgency",
+      "evidence": "urgently",
+      "strength": 0.65
+    }
+  ],
+  "component_scores": {
+    "text": 0.5,
+    "url": null,
+    "rules": 0.4
+  },
+  "overrides_fired": [],
+  "advice_en": "Checked on-device without internet.",
+  "advice_hi": "डिवाइस पर ऑफलाइन जांचा गया।",
+  "next_steps": [
+    "Check with official provider"
+  ],
+  "explanation_source": "on-device",
+  "model_version": "v2",
+  "processing_ms": 25,
+  "error": null
+}

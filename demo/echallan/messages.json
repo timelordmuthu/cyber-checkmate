@@ -1,0 +1,62 @@
+[
+  {
+    "id": "echallan_scam_01",
+    "text": "E-Challan Notice: Fine of Rs.1000 pending for traffic violation against vehicle DL-01-AB-1234. Pay immediately at http://echallan-parivahan.info/pay to avoid license cancellation.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_02",
+    "text": "Traffic Police Alert: Your vehicle MH-02-CD-5678 was caught speeding. Pending challan of Rs.2000. Pay online within 24 hrs at http://echallan-vahan.org.in/pay or warrant will be issued.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_03",
+    "text": "Parivahan Sewa E-Challan: Pending penalty of Rs 500 for red light violation on KA-03-EF-9012. Click http://traffic-challan-update.live/fine to pay now. Failing which RC will be blocked.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_04",
+    "text": "Court Summon Notice: Unpaid traffic challan for vehicle HR-26-GH-3456. Pay fine of Rs.1500 immediately at http://court-echallan.top/case or attend virtual court hearing tomorrow.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_05",
+    "text": "Delhi Traffic Police: Speed violation detected on camera for vehicle DL-08-JK-7890. Fine Rs.2000 pending. Settle penalty immediately at http://delhi-traffic-challan.biz/settle to avoid FIR.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_06",
+    "text": "Urgent Traffic Challan: Helmet violation recorded against UP-16-LM-2345. Penalty Rs.1000 unpaid. Pay online at http://parivahan-challan-pay.online/fine to avoid vehicle seizure.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_07",
+    "text": "E-Challan Warning: Traffic fine Rs.1200 pending for wrong parking against TS-09-NP-6789. Clear dues immediately at http://echallan-notice.click/pay or legal notice will be dispatched.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_scam_08",
+    "text": "Parivahan Alert: Your driving license is under suspension notice due to unpaid e-challan on vehicle GJ-01-QR-4321. Pay Rs.1000 penalty immediately at http://mparivahan-fine.xyz/verify.",
+    "label": 1,
+    "category": "echallan_scam"
+  },
+  {
+    "id": "echallan_legit_01",
+    "text": "Challan No. DL83920193 generated for vehicle DL-04-XY-8899 on 15-Oct-2026 for violation: Over Speeding. Please visit the official portal https://echallan.parivahan.gov.in to verify and pay. - MoRTH",
+    "label": 0,
+    "category": "echallan_legit"
+  },
+  {
+    "id": "echallan_legit_02",
+    "text": "Your payment of Rs. 500 for Challan No. MH94820192 against vehicle MH-12-AB-3344 was successfully received on 20-Oct-2026. Transaction ID: TXN89284192. - Parivahan Sewa",
+    "label": 0,
+    "category": "echallan_legit"
+  }
+]

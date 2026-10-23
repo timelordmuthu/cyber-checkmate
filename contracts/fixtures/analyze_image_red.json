@@ -1,0 +1,32 @@
+{
+  "risk_score": 85,
+  "level": "red",
+  "input_type": "image",
+  "extracted_text": "Your electricity will be disconnected tonight. Pay bill immediately.",
+  "urls_found": [
+    "http://pay-bill.click"
+  ],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "fear",
+      "evidence": "disconnected tonight",
+      "strength": 0.85
+    }
+  ],
+  "component_scores": {
+    "text": 0.88,
+    "url": 0.75,
+    "rules": 0.8
+  },
+  "overrides_fired": [],
+  "advice_en": "This screenshot shows a common power bill disconnection scam.",
+  "advice_hi": "यह स्क्रीनशॉट बिजली बिल धोखाधड़ी का सामान्य संकेत देता है।",
+  "next_steps": [
+    "Contact your official electricity provider board"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 280,
+  "error": null
+}

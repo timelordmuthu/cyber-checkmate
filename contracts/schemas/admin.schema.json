@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Ping": {
+      "type": "object",
+      "required": [
+        "status",
+        "role"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "ReportList": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "VariantList": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "RetrainStatus": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "step": {
+          "type": "string"
+        },
+        "progress": {
+          "type": "number"
+        },
+        "version": {
+          "type": "string"
+        },
+        "metrics": {
+          "type": "object"
+        },
+        "gate_passed": {
+          "type": "boolean"
+        },
+        "started_at": {
+          "type": "string"
+        },
+        "finished_at": {
+          "type": "string"
+        }
+      }
+    },
+    "ModelList": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "Rules": {
+      "type": "object",
+      "properties": {
+        "categories": {
+          "type": "object"
+        }
+      }
+    },
+    "AddRuleResponse": {
+      "type": "object",
+      "required": [
+        "success"
+      ],
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string"
+        },
+        "phrase": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

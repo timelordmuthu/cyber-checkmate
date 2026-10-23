@@ -1,0 +1,217 @@
+{
+  "verified": false,
+  "_readme": [
+    "IMPORTANT: 'verified' is false. Before going live, every domain in 'official_domains'",
+    "must be manually confirmed against the brand's own website (About / Legal / Contact page).",
+    "Do NOT add or remove domains without cross-checking the official source.",
+    "Fictional or mis-typed domains here would cause false-negatives in the brand-check."
+  ],
+  "brands": {
+    "sbi": {
+      "display_name": "State Bank of India",
+      "tokens": ["sbi", "state bank", "statebank", "onlinesbi"],
+      "official_domains": [
+        "sbi.co.in",
+        "onlinesbi.sbi",
+        "sbionline.sbi",
+        "sbicard.com",
+        "sbilife.co.in",
+        "sbimf.com"
+      ]
+    },
+    "hdfc_bank": {
+      "display_name": "HDFC Bank",
+      "tokens": ["hdfc", "hdfcbank", "hdfc bank"],
+      "official_domains": [
+        "hdfcbank.com",
+        "hdfc.com",
+        "hdfclife.com",
+        "hdfcsec.com",
+        "hdfcfund.com"
+      ]
+    },
+    "icici_bank": {
+      "display_name": "ICICI Bank",
+      "tokens": ["icici", "icicidirect", "icicibank", "icici bank"],
+      "official_domains": [
+        "icicibank.com",
+        "icicidirect.com",
+        "icicilombard.com",
+        "iciciprulife.com",
+        "icicimf.com"
+      ]
+    },
+    "axis_bank": {
+      "display_name": "Axis Bank",
+      "tokens": ["axis", "axisbank", "axis bank"],
+      "official_domains": [
+        "axisbank.com",
+        "axisdirect.in",
+        "axismf.com"
+      ]
+    },
+    "kotak": {
+      "display_name": "Kotak Mahindra Bank",
+      "tokens": ["kotak", "kotakbank", "kotak bank", "kotak mahindra"],
+      "official_domains": [
+        "kotak.com",
+        "kotakbank.com",
+        "kotakmahindrabank.com",
+        "kotaksecurities.com",
+        "kotakmf.com"
+      ]
+    },
+    "paytm": {
+      "display_name": "Paytm",
+      "tokens": ["paytm", "paytm bank", "paytm payments"],
+      "official_domains": [
+        "paytm.com",
+        "paytmbank.com",
+        "paytmmoney.com",
+        "paytminsurance.com"
+      ]
+    },
+    "phonepe": {
+      "display_name": "PhonePe",
+      "tokens": ["phonepe", "phone pe"],
+      "official_domains": [
+        "phonepe.com"
+      ]
+    },
+    "google_pay": {
+      "display_name": "Google Pay",
+      "tokens": ["gpay", "google pay", "googlepay", "tez"],
+      "official_domains": [
+        "pay.google.com",
+        "google.com"
+      ]
+    },
+    "npci_bhim": {
+      "display_name": "NPCI / BHIM UPI",
+      "tokens": ["npci", "bhim", "upi", "bhim upi", "rupay"],
+      "official_domains": [
+        "npci.org.in",
+        "bhimupi.org.in",
+        "upi.org"
+      ]
+    },
+    "india_post": {
+      "display_name": "India Post",
+      "tokens": ["india post", "indiapost", "speed post", "postal"],
+      "official_domains": [
+        "indiapost.gov.in",
+        "epostoffice.gov.in",
+        "cept.gov.in"
+      ]
+    },
+    "irctc": {
+      "display_name": "IRCTC / Indian Railways",
+      "tokens": ["irctc", "indian railways", "indianrailways", "railways"],
+      "official_domains": [
+        "irctc.co.in",
+        "indianrailways.gov.in",
+        "irctchelp.in",
+        "indianrail.gov.in"
+      ]
+    },
+    "income_tax": {
+      "display_name": "Income Tax e-Filing",
+      "tokens": ["income tax", "incometax", "it efiling", "efiling", "itr"],
+      "official_domains": [
+        "incometax.gov.in",
+        "efiling.incometax.gov.in",
+        "tin.tin.nsdl.com",
+        "tin-nsdl.com"
+      ]
+    },
+    "aadhaar_uidai": {
+      "display_name": "Aadhaar / UIDAI",
+      "tokens": ["aadhaar", "aadhar", "uidai", "uid"],
+      "official_domains": [
+        "uidai.gov.in",
+        "myaadhaar.uidai.gov.in",
+        "resident.uidai.gov.in"
+      ]
+    },
+    "digilocker": {
+      "display_name": "DigiLocker",
+      "tokens": ["digilocker", "digi locker"],
+      "official_domains": [
+        "digilocker.gov.in",
+        "api.digitallocker.gov.in"
+      ]
+    },
+    "amazon_india": {
+      "display_name": "Amazon India",
+      "tokens": ["amazon", "amazon india", "amazonin"],
+      "official_domains": [
+        "amazon.in",
+        "amazon.com",
+        "amazonpay.in",
+        "amzn.in"
+      ]
+    },
+    "flipkart": {
+      "display_name": "Flipkart",
+      "tokens": ["flipkart", "fk", "flipkart india"],
+      "official_domains": [
+        "flipkart.com",
+        "fkimg.com",
+        "flixcart.com",
+        "flipkartgroceries.com"
+      ]
+    }
+  },
+  "infrastructure_allowlist": [
+    "google.com",
+    "googleapis.com",
+    "gstatic.com",
+    "googleusercontent.com",
+    "cloudflare.com",
+    "akamai.net",
+    "akamaiedge.net",
+    "fastly.net",
+    "amazonaws.com",
+    "aws.amazon.com",
+    "cloudfront.net",
+    "azureedge.net",
+    "cdninstagram.com",
+    "whatsapp.net",
+    "fbcdn.net",
+    "twimg.com"
+  ],
+  "shorteners_and_free_hosts": [
+    "bit.ly",
+    "tinyurl.com",
+    "t.co",
+    "goo.gl",
+    "ow.ly",
+    "is.gd",
+    "buff.ly",
+    "adf.ly",
+    "short.io",
+    "rb.gy",
+    "cutt.ly",
+    "tiny.cc",
+    "s.id",
+    "shorturl.at",
+    "linktr.ee",
+    "taplink.cc",
+    "sites.google.com",
+    "forms.gle",
+    "docs.google.com",
+    "netlify.app",
+    "vercel.app",
+    "github.io",
+    "glitch.me",
+    "repl.co",
+    "000webhostapp.com",
+    "freewebhostingarea.com",
+    "weebly.com",
+    "wixsite.com",
+    "blogspot.com",
+    "wordpress.com",
+    "t.me",
+    "wa.me"
+  ]
+}

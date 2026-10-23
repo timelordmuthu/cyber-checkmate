@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "state": "passed",
+  "version": "v3",
+  "metrics": {
+    "accuracy": 0.96,
+    "recall": 0.94,
+    "fp_rate": 0.02
+  },
+  "gate_passed": true,
+  "finished_at": "2026-10-22T10:15:00Z"
+}

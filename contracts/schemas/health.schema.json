@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "status",
+    "components",
+    "model_version"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "components": {
+      "type": "object"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "api_version": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "config": {
+      "type": "object"
+    }
+  }
+}

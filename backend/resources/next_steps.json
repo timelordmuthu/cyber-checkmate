@@ -1,0 +1,38 @@
+{
+  "red": {
+    "en": [
+      "Do not click any links or download attachments from this message.",
+      "Never share your OTP, UPI PIN, password, or card details with anyone.",
+      "Block the sender immediately on SMS or messaging apps.",
+      "Report financial fraud immediately at 1930 or file a complaint at cybercrime.gov.in."
+    ],
+    "hi": [
+      "इस संदेश में दिए गए किसी भी लिंक पर क्लिक न करें और न ही कोई फ़ाइल डाउनलोड करें।",
+      "अपना OTP, UPI PIN, पासवर्ड या कार्ड का विवरण कभी किसी से साझा न करें।",
+      "इस भेजने वाले को अपने फोन या मैसेजिंग ऐप पर तुरंत ब्लॉक करें।",
+      "वित्तीय धोखाधड़ी होने पर तुरंत 1930 पर कॉल करें या cybercrime.gov.in पर शिकायत दर्ज करें।"
+    ]
+  },
+  "amber": {
+    "en": [
+      "Verify the sender by contacting the organization directly using their official website or verified app.",
+      "Do not use the contact numbers or web links provided inside this message.",
+      "Never approve unexpected UPI collect requests or debit authorisations."
+    ],
+    "hi": [
+      "संबंधित संस्था की आधिकारिक वेबसाइट या ऐप के जरिए सीधे संपर्क करके इस संदेश की पुष्टि करें।",
+      "इस संदेश के अंदर दिए गए किसी भी फोन नंबर या लिंक का इस्तेमाल न करें।",
+      "अचानक आए किसी भी UPI कलेक्ट रिक्वेस्ट या पेमेंट को कभी स्वीकार न करें।"
+    ]
+  },
+  "green": {
+    "en": [
+      "The message appears legitimate, but always stay cautious.",
+      "Remember: Banks and official departments never ask for your confidential PIN or OTP via SMS."
+    ],
+    "hi": [
+      "यह संदेश सामान्य प्रतीत होता है, फिर भी हमेशा सतर्क रहें।",
+      "याद रखें: बैंक या सरकारी विभाग कभी भी SMS के जरिए आपका गोपनीय PIN या OTP नहीं मांगते।"
+    ]
+  }
+}

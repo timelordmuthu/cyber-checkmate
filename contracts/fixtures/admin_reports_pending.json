@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "text": "Electricity cut off tonight pay immediately",
+    "urls": [
+      "http://pay-bill.click"
+    ],
+    "user_label": "scam",
+    "predicted_level": "amber",
+    "predicted_score": 60,
+    "model_version": "v2",
+    "status": "pending",
+    "category": "electricity_disconnection",
+    "template_id": "in_elec_01",
+    "duplicate_count": 1,
+    "created_at": "2026-10-22T10:00:00Z",
+    "reviewed_at": null
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "risk_score": 88,
+  "level": "red",
+  "input_type": "text",
+  "extracted_text": "மின் இணைப்பு துண்டிக்கப்படும்",
+  "urls_found": [],
+  "red_flags": [
+    {
+      "type": "tactic",
+      "category": "fear",
+      "evidence": "power cut",
+      "strength": 0.85
+    }
+  ],
+  "component_scores": {
+    "text": 0.85,
+    "url": null,
+    "rules": 0.75
+  },
+  "overrides_fired": [],
+  "advice_en": "Electricity disconnection threat detected.",
+  "advice_hi": "बिजली कटौती की धमकी पाई गई।",
+  "advice_local": "மின் இணைப்பு துண்டிப்பு அச்சுறுத்தல் கண்டறியப்பட்டது.",
+  "language": {
+    "code": "ta",
+    "script": "Tamil",
+    "translated": true,
+    "translation": "Electricity connection will be disconnected",
+    "translator": "indictrans2-dist-200M"
+  },
+  "next_steps": [
+    "Do not call unknown helpline numbers"
+  ],
+  "explanation_source": "template",
+  "model_version": "v2",
+  "processing_ms": 210,
+  "error": null
+}
